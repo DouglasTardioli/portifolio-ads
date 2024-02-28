@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #161513;
+    --text: #F0F2F5;
+
+
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+
+    padding: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    cursor: pointer;
+}
+
+.gradient {
+    background-image: linear-gradient(90deg, rgba(66, 102, 91, 1) 0%, rgba(9, 121, 22, 1) 35%, rgba(82, 221, 145, 1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hover:hover {
+    background-image: linear-gradient(90deg, rgb(38, 46, 44) 0%, rgb(9, 75, 17) 35%, rgb(85, 150, 114) 100%);
+}
+
+#icon-menu {
+    width: 30px;
+    height: 30px;
+
+    cursor: pointer;
+}
+
+header nav {
+    display: none;
+    visibility: hidden;
+    padding: 2rem;
+}
+
+header nav ul li {
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+header nav li::marker {
+    content: "";
+    list-style: none;
+}
+
+.saudacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin: 0 auto;
+}
+
+.saudacao h1 {
+    font-size: 3rem;
+}
+
+.saudacao img {
+    margin-top: 20px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
