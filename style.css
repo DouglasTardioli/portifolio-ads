@@ -7,8 +7,14 @@
 :root {
     --background: #161513;
     --text: #F0F2F5;
+    --menu: #292827;
 
+}
 
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 body {
@@ -17,6 +23,7 @@ body {
     color: var(--text);
 
     padding: 1.5rem;
+    height: 100vh;
 }
 
 a {
@@ -28,18 +35,14 @@ a:visited {
 }
 
 header {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo a{
-    display: flex;
+.logo a {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-
     cursor: pointer;
 }
 
@@ -61,33 +64,59 @@ header {
     cursor: pointer;
 }
 
-header nav {
-    display: none;
-    visibility: hidden;
+nav {
+    position: absolute;
+    z-index: 100;
+    right: 0;
+    top: -10px;
+    height: 20vh;
+    width: 70%;
     padding: 2rem;
+    background-color: var(--menu);
+    display: none;
+    visibility: hidden;  
+    border-radius: 1rem;
 }
 
-header nav ul li {
+nav ul li {
     cursor: pointer;
-    margin-top: 0.5rem;
+   
+    margin-bottom: 2rem;
 }
 
-header nav li::marker {
+nav li::marker {
     content: "";
     list-style: none;
 }
 
-.saudacao {
+nav #icon-back {
+    width: 20px;
+    height: 20px;
+
+    cursor: pointer;
+}
+
+.show {
     display: flex;
+    visibility: visible;
+    justify-content: space-between;
+}
+
+
+.icon-hidden {
+    display: none;
+    visibility: hidden;
+}
+
+.saudacao {
     flex-direction: column;
-    align-items: center;
-    
     margin: 0 auto;
 }
 
 .saudacao h1 {
     font-size: 1.5rem;
 }
+
 
 .saudacao img {
     margin-top: 20px;
@@ -96,8 +125,6 @@ header nav li::marker {
 }
 
 .description {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 20px;
     text-align: center;
 }
