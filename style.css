@@ -6,6 +6,7 @@
 
 :root {
     --background: #161513;
+    --footer: #222221;
     --text: #F0F2F5;
     --menu: #292827;
 
@@ -18,22 +19,31 @@
 }
 
 body {
+    position: relative;
+    margin: 0 auto;
     font-family: "Roboto", sans-serif;
     background-color: var(--background);
     color: var(--text);
-
-    padding: 1.5rem;
     height: 100vh;
+    width: 100vw;
+    
+   
 }
 
 a {
     text-decoration: none;
+    color: var(--text);
 }
 
 a:visited {
     text-decoration: none
 }
 
+main, header {
+    padding: .7rem;
+    margin: 0 auto;
+    max-width: 1190px;
+}
 header {
     position: relative;
     display: flex;
@@ -44,6 +54,8 @@ header {
 .logo a {
     flex-direction: column;
     cursor: pointer;
+    font-family: "Dancing Script", cursive;
+    font-size: 1.2rem;
 }
 
 .gradient {
@@ -60,27 +72,26 @@ header {
 #icon-menu {
     width: 30px;
     height: 30px;
-
     cursor: pointer;
 }
 
 nav {
     position: absolute;
     z-index: 100;
-    right: 0;
-    top: -10px;
-    height: 20vh;
+    right: 15px;
+    top: 10px;
+    height: 35vh;
     width: 70%;
     padding: 2rem;
     background-color: var(--menu);
     display: none;
-    visibility: hidden;  
+    visibility: hidden;
     border-radius: 1rem;
 }
 
 nav ul li {
     cursor: pointer;
-   
+
     margin-bottom: 2rem;
 }
 
@@ -114,7 +125,10 @@ nav #icon-back {
 }
 
 .saudacao h1 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    font-family: "Dancing Script", cursive;
+    color: var(--text);
+
 }
 
 
@@ -124,7 +138,126 @@ nav #icon-back {
     border-radius: 50%;
 }
 
-.description {
+.description, .formacao, .portifolio {
+
+    display: flex;
+   
+    margin-top: 4rem;
+    flex-direction: column;
     margin: 20px;
     text-align: center;
+}
+
+.description h1 {
+    font-size: 1.2rem;
+}
+footer {
+   display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.5rem 1.5rem 0 0;
+    height: 10rem;
+    width: 100%;
+    background-color: var(--footer);
+}
+
+.social {
+   
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+.social span {
+    display: flex;
+    margin-bottom: .2rem;
+    align-items: center;
+}
+
+.social img {
+    margin: .5rem;
+    width: 20px;
+    height: 20px;
+}
+
+
+@media (min-width: 768px) {
+
+    nav {
+        position: relative;
+        top: 13px;
+        display: flex;
+        visibility: visible;
+        background-color: var(--background);
+
+        height: 0px;
+        width: 70%;
+        padding: 0;
+
+       
+    }
+
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+
+        width: 70%;
+        align-items: center;
+    }
+
+    nav ul li:hover {
+        color: rgb(1, 163, 20);
+        transition: .3s;
+
+    }
+
+    #icon-menu {
+        display: none;
+        visibility: hidden;
+    }
+
+    nav #icon-back {
+        display: none;
+        visibility: hidden
+    }
+
+    .saudacao-controll {
+        display: flex;
+
+        align-items: center;
+        width: 100%;
+    }
+
+
+    .saudacao h1 {
+    
+        text-align: center;
+        font-size: 3rem;
+    
+    }
+
+    .saudacao img {
+        margin-top: 4rem;
+        margin-right: 2rem;
+        width: 13rem;
+
+        border: none;
+        border-radius: 4rem 2rem 4rem 2rem;
+
+    }
+    .description, .formacao, .portifolio{
+        display: flex;
+        margin-top: 4rem;
+        align-items: start;
+    }
+
+    .description h1 {
+        font-size: 2rem;
+    }
+
+   .description, .formacao, .portifolio p {
+    font-size: 1.2rem;
+   }
 }
