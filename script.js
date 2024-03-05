@@ -43,3 +43,25 @@ back.addEventListener("click", () => {
   icon.classList.remove("icon-hidden")
 })
 
+const cardData = [
+  { title: 'Dark Mode', content: 'Efeito dark para mudança da cor da tela e icones', img: "assets/efeito-dark.png" },
+  { title: 'Landing Page', content: 'Landing Page de um salão de beleza', img: "assets/landing-page.png" },
+  { title: 'Tela de login', content: 'Tela de Login para acessar um sistema de camping', img: "assets/tela-login.png" },
+  { title: 'Temperatura', content: 'App para busca de temperatura', img: "assets/temperatura.png" },
+  { title: 'NFT', content: 'site para divulgação de NFTs', img: "assets/nft.png" },
+  { title: 'Landing Coffee', content: 'Site para compra de cafés', img: "assets/landing-coffee.png" },
+  
+];
+
+const cardContainer = document.getElementById('card-container');
+
+
+const cardsHTML = cardData.map((card, index) => `
+  <div class="card">
+      <img src=${card.img}>
+      <h2>${card.title}</h2>
+      <p>${card.content}</p>
+  </div>
+`).join('');
+
+cardContainer.innerHTML = cardsHTML;
