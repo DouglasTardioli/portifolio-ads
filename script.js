@@ -44,12 +44,12 @@ back.addEventListener("click", () => {
 })
 
 const cardData = [
-  { title: 'Dark Mode', content: 'Efeito dark para mudança da cor da tela e icones', img: "assets/efeito-dark.png" },
-  { title: 'Landing Page', content: 'Landing Page de um salão de beleza', img: "assets/landing-page.png" },
-  { title: 'Tela de login', content: 'Tela de Login para acessar um sistema de camping', img: "assets/tela-login.png" },
-  { title: 'Temperatura', content: 'App para busca de temperatura', img: "assets/temperatura.png" },
-  { title: 'NFT', content: 'site para divulgação de NFTs', img: "assets/nft.png" },
-  { title: 'Landing Coffee', content: 'Site para compra de cafés', img: "assets/landing-coffee.png" },
+  { title: 'Dark Mode', content: 'Efeito dark para mudança da cor da tela e icones', img: "assets/efeito-dark.png", link: "https://github.com/DouglasTardioli/Efeito-dark"},
+  { title: 'Landing Page', content: 'Landing Page de um salão de beleza', img: "assets/landing-page.png", link: "https://github.com/DouglasTardioli/beatysalon" },
+  { title: 'Tela de login', content: 'Tela de Login para acessar um sistema de camping', img: "assets/tela-login.png", link: "https://github.com/DouglasTardioli/camp-in" },
+  { title: 'Temperatura', content: 'App para busca de temperatura', img: "assets/temperatura.png", link: "https://github.com/DouglasTardioli/wearth" },
+  { title: 'NFT', content: 'site para divulgação de NFTs', img: "assets/nft.png", link: "https://github.com/DouglasTardioli/Rocket-Nfts" },
+  { title: 'Landing Coffee', content: 'Site para compra de cafés', img: "assets/landing-coffee.png", link: "https://github.com/DouglasTardioli/rocketcoffee" },
   
 ];
 
@@ -58,9 +58,11 @@ const cardContainer = document.getElementById('card-container');
 
 const cardsHTML = cardData.map((card, index) => `
   <div class="card">
+     <a href=${card.link} target="blank">
       <img src=${card.img}>
-      <h2>${card.title}</h2>
+       <h2>${card.title}</h2>
       <p>${card.content}</p>
+     </a>
   </div>
 `).join('');
 
