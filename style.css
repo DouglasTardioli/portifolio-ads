@@ -7,11 +7,11 @@
 :root {
     --background: #161513;
     --footer: #222221;
-    --text: #dadada;
+    --text: #fafafa;
     --menu: #292827;
     --text-porti: #c9c9c9;
     --border: rgba(9, 121, 22, 1);
-    --logo: rgba(26, 240, 51, 0.438);
+    --logo: #fafafa;
 
     -webkit-font-smoothing: antialiased
 }
@@ -235,11 +235,14 @@ section p {
 textarea:focus {
     outline: none;
     border: 2px solid var(--border);
+    
 }
+
 
 .contato input::placeholder {
     color: #686868;
 }
+
 
 .contato label {
     display: flex;
@@ -248,7 +251,7 @@ textarea:focus {
 }
 
 .contato input {
-    background-color: var(--text-porti);
+    background-color: var(--menu);
     border-radius: .3rem;
     width: 20rem;
     height: 2rem;
@@ -259,6 +262,8 @@ textarea:focus {
 }
 
 .contato textarea {
+    background-color: var(--menu);
+
     font-family: "Roboto", sans-serif;
     resize: none;
     padding: .5rem;
@@ -266,8 +271,8 @@ textarea:focus {
     width: 20rem;
     height: 12rem;
     border: none;
-    color: var(--menu);
-    background-color: var(--text-porti);
+    color: var(--text-porti);
+  
     font-size: 1.2rem;
 }
 
@@ -306,8 +311,10 @@ footer {
 
 }
 
-.social a {
+#icon-social {
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .social span {
