@@ -73,9 +73,12 @@ cardContainer.innerHTML = cardsHTML;
 const botaoEnviar = document.getElementById("enviarButton");
 
 
-botaoEnviar.addEventListener("click", () => {
+botaoEnviar.addEventListener("click", (e) => {
+  e.preventDefault()
   botaoEnviar.innerText = "Enviado 🛫";
-
+  setTimeout(() => {
+    location.reload(true)
+  }, 2000)
 });
 
 
