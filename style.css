@@ -66,7 +66,6 @@ header {
     cursor: pointer;
     font-family: "Dancing Script", cursive;
     font-size: 1.2rem;
-    margin-right: 25rem;
 }
 
 .logo span {
@@ -145,6 +144,7 @@ section p {
 .saudacao {
     flex-direction: column;
     margin: 0 auto;
+    
 }
 
 .saudacao h1 {
@@ -159,7 +159,6 @@ section p {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 0 auto;
 }
 
 .saudacao img {
@@ -360,7 +359,7 @@ footer {
     nav ul {
         display: flex;
         justify-content: space-between;
-
+        margin-left: 18rem;
         width: 70%;
         align-items: center;
     }
@@ -370,6 +369,8 @@ footer {
         transition: .3s;
 
     }
+
+   
 
     #icon-menu {
         display: none;
@@ -383,24 +384,25 @@ footer {
 
     .saudacao-controll {
         display: flex;
-        flex-direction: row;
-        justify-content: start;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        width: 100%;
+       
+        margin: 0 auto;
     }
 
-
+   
+  
     .saudacao h1 {
-
+       
         text-align: center;
         font-size: 3rem;
 
     }
 
     .saudacao img {
-        margin-top: 4rem;
-        margin-right: 2rem;
-        width: 13rem;
+        margin: 0 auto;
+        width: 15rem;
 
         border: none;
         border-radius: 4rem 2rem 4rem 2rem;
