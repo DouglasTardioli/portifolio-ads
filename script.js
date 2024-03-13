@@ -1,3 +1,4 @@
+// <*---- Finalidade de fazer um smooth no Scroll até a tela indicada
 
 const sobre = document.querySelector('#sobre-mim');
 const portifolio = document.querySelector('#portifolio');
@@ -21,12 +22,12 @@ contato.addEventListener('click', () => {
 portifolio.addEventListener('click', () => {
   secaoPortifolio.scrollIntoView({ behavior: 'smooth' });
 });
+// <*---- Final do Smooth Scroll
 
-
+// ---------------------------------------------------------------------------
+// <*---- Controle do menu Mobile e Web
 const icon = document.getElementById("icon-menu");
 const back = document.getElementById("icon-back")
-
-
 
 icon.addEventListener("click", () => {
 
@@ -42,7 +43,9 @@ back.addEventListener("click", () => {
   nav.classList.remove("show")
   icon.classList.remove("icon-hidden")
 })
+// ---------------------------------------------------------------------------
 
+// <*---- Criação dos Cards de portifolio 
 const cardData = [
   { title: 'Dark Mode', content: 'Efeito dark para mudança da cor da tela e icones', img: "assets/efeito-dark.png", link: "https://github.com/DouglasTardioli/Efeito-dark" },
   { title: 'Landing Page', content: 'Landing Page de um salão de beleza', img: "assets/landing-page.png", link: "https://github.com/DouglasTardioli/beatysalon" },
@@ -55,8 +58,7 @@ const cardData = [
 
 const cardContainer = document.getElementById('card-container');
 
-
-const cardsHTML = cardData.map((card, index) => `
+const cardsHTML = cardData.map((card) => `
   <div class="card">
      <a href=${card.link} target="blank">
       <img src=${card.img}>
@@ -67,11 +69,10 @@ const cardsHTML = cardData.map((card, index) => `
 `).join('');
 
 cardContainer.innerHTML = cardsHTML;
+// ---------------------------------------------------------------------------
 
-
-
+// <*---- Controle do botão enviar, fazendo o reload depois de 2segundos
 const botaoEnviar = document.getElementById("enviarButton");
-
 
 botaoEnviar.addEventListener("click", (e) => {
   e.preventDefault()

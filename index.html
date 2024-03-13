@@ -13,11 +13,10 @@
 </head>
 
 <body>
-
-    <!-- Parte Sobre mim primeira tela -->
+    <!-- Header - NavBar e Logo -->
     <header>
         <div class="logo">
-            <a href="/" class="flex">
+            <a href="https://github.com/DouglasTardioli" class="flex" target="_blank">
                 <span>Douglas</span>
                 <span>Tardioli</span>
             </a>
@@ -34,8 +33,10 @@
             <img src="assets/back-svgrepo-com.svg" alt="" class="" id="icon-back">
         </nav>
     </header>
-    <main>
 
+    <!-- Começo da parte Principal do Main -->
+    <main>
+        <!-- Saudação com foto e o Nome -->
         <section class="saudacao flex">
             <div class="saudacao-controll">
                 <a href="https://github.com/DouglasTardioli">
@@ -47,11 +48,17 @@
                 </a>
             </div>
         </section>
+
+        <!-- Sobre mim - pequeno resumo -->
         <section class="description flex" id="secao-sobre">
             <h1>Sobre mim </h1>
-           <p>Douglas parece um cara gente boa, apesar de nao interagirmos muito no grupo</p>
+            <p>Olá! Atualmente, estou cursando Análise e Desenvolvimento de Sistemas na UNINTER.<br>
+                Também estou realizando alguns cursos voltados para front-end, com o objetivo de<br> aprofundar meus conhecimentos nessa área. Além
+                disso, sou apaixonado por filmes, séries<br> e boa música. Embora tenha nascido em Goiás, resido em São
+                Paulo há bastante tempo.</p>
         </section>
 
+        <!-- Formação - pequeno resumo sobre formação -->
         <section class="formacao" id="secao-formacao">
             <h1>Formação </h1>
             <p>Ensino Médio completo</p>
@@ -59,41 +66,47 @@
             <p>Fiz alguns curso voltados para Front-end, cursos da Rocketseat, OneBitCode entre outros</p>
             <p>Curso Técnico de Edificações</p>
         </section>
+
+        <!-- Portifolio - Algumas dos projetos que ja fiz -->
         <section class="portifolio" id="secao-portifolio">
             <h1>Portfólio</h1>
             <p>Alguns projetos que fiz com Html, Css e Javascript</p>
             <div id="card-container"></div>
         </section>
 
+        <!-- Contato - para entrar em contato -->
         <section class="contato" id="secao-contato">
             <h1>Contato</h1>
             <form>
                 <label for="name">Nome: </label>
-                <input type="text" id="name" placeholder="Dudu Valdivia">
+                <input type="text" id="name" placeholder="Dudu Valdivia" required>
                 <label for="email">Email: </label>
-                <input type="email" name="email" id="email" placeholder="exemplo@email.com">
+                <input type="email" name="email" id="email" placeholder="exemplo@email.com" required>
                 <label for="message">Digite sua mensagem: </label>
-                <textarea name="message" id="message" cols="30" rows="10" placeholder="Deixe sua mensagem"></textarea>
-                <button id="enviarButton" >Enviar</button>
-            </form> 
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Deixe sua mensagem"
+                    required></textarea>
+                <button id="enviarButton">Enviar</button>
+            </form>
         </section>
     </main>
 
+    <!-- Footer - rodapé da aplicação -->
     <footer>
         <div class="social">
-           <div id="icon-social"> 
+            <div id="icon-social">
                 <a href="https://github.com/DouglasTardioli" target="_blank">
                     <img src="assets/github-142-svgrepo-com.svg" alt="">
                 </a>
                 <a href="https://www.instagram.com/douglas_tardioli/" target="_blank">
                     <img src="assets/instagram-167-svgrepo-com.svg" alt="">
                 </a>
-                    
-           </div>
+
+            </div>
             <p>Feito Por Douglas Tardioli 🚀</p>
         </div>
     </footer>
 
+    <!-- Chamada do javaScript -->
     <script src="script.js"></script>
 </body>
 
