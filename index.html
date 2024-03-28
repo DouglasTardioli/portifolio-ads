@@ -15,14 +15,13 @@
 <body>
     <!-- Header - NavBar e Logo -->
     <header>
-        <div class="logo">
+        <div class="logo" id="toggle-logo">
             <a href="https://github.com/DouglasTardioli" class="flex" target="_blank">
-                <span>Douglas</span>
-                <span>Tardioli</span>
+            
+                <span>DTardioli</span>
             </a>
         </div>
         <img src="assets/menu-alt-05-svgrepo-com.svg" alt="" class="" id="icon-menu">
-
         <nav class="" id="menu">
             <ul>
                 <li id="sobre-mim">Sobre mim</li>
@@ -33,7 +32,11 @@
             <img src="assets/back-svgrepo-com.svg" alt="" class="" id="icon-back">
         </nav>
     </header>
-
+    <div id="toggle">
+        <i id="indicator"></i>
+        <img id="moon" src="assets/moon.svg" alt="moon">
+        <img id="sun" src="assets/sun.svg" alt="sol">
+    </div>
     <!-- Começo da parte Principal do Main -->
     <main>
         <!-- Saudação com foto e o Nome -->
@@ -53,7 +56,8 @@
         <section class="description flex" id="secao-sobre">
             <h1>Sobre mim </h1>
             <p>Olá! Atualmente, estou cursando Análise e Desenvolvimento de Sistemas na UNINTER.<br>
-                Também estou realizando alguns cursos voltados para front-end, com o objetivo de<br> aprofundar meus conhecimentos nessa área. Além
+                Também estou realizando alguns cursos voltados para front-end, com o objetivo de<br> aprofundar meus
+                conhecimentos nessa área. Além
                 disso, sou apaixonado por filmes, séries<br> e boa música. Embora tenha nascido em Goiás, resido em São
                 Paulo há bastante tempo.</p>
         </section>
@@ -93,7 +97,7 @@
     <!-- Footer - rodapé da aplicação -->
     <footer>
         <div class="social">
-            <div id="icon-social">
+            <div class="icon-social" id="icon-dark">
                 <a href="https://github.com/DouglasTardioli" target="_blank">
                     <img src="assets/github-142-svgrepo-com.svg" alt="">
                 </a>
@@ -102,6 +106,18 @@
                 </a>
                 <a href="https://www.linkedin.com/in/douglas-peixoto-tardioli-a8481b224/" target="_blank">
                     <img src="assets/linkedin-svgrepo-com.svg" alt="">
+                </a>
+
+            </div>
+            <div class="icon-social" id="icon-light">
+                <a href="https://github.com/DouglasTardioli" target="_blank">
+                    <img src="assets/github-clone.svg" alt="">
+                </a>
+                <a href="https://www.instagram.com/douglas_tardioli/" target="_blank">
+                    <img src="assets/instagram-clone.svg" alt="">
+                </a>
+                <a href="https://www.linkedin.com/in/douglas-peixoto-tardioli-a8481b224/" target="_blank">
+                    <img src="assets/linkedin-clone.svg" alt="">
                 </a>
 
             </div>
