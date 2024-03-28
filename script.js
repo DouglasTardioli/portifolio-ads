@@ -83,3 +83,26 @@ botaoEnviar.addEventListener("click", (e) => {
 });
 
 
+// <*---- Toggle dark mode
+const body = document.querySelector('body')
+const nav = document.querySelector('nav')
+const header = document.querySelector('header')
+const toggle = document.getElementById('toggle');
+const logo = document.getElementById('toggle-logo');
+const iconLight = document.getElementById('icon-light');
+const iconDark = document.getElementById('icon-dark');
+
+const main = document.querySelector('main')
+
+
+toggle.onclick = function (){
+    toggle.classList.toggle('active')
+    body.classList.toggle('active')
+    nav.classList.toggle('active')
+    header.classList.toggle('active')
+    main.classList.toggle('active')
+    logo.classList.toggle('active')
+    iconLight.classList.toggle('active')
+    iconDark.classList.toggle('active')
+
+}
