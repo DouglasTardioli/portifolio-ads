@@ -15,7 +15,7 @@
     --text-porti: #c9c9c9;
     --border: rgba(9, 121, 22, 1);
     --logo: #fafafa;
-    -webkit-font-smoothing: antialiased
+    -webkit-font-smoothing: antialiased;
 }
 
 .flex {
@@ -62,7 +62,7 @@ header {
 }
 
 .logo a {
-    flex-direction: column;
+    gap: .5rem;
     cursor: pointer;
     font-family: "Dancing Script", cursive;
     font-size: 1.2rem;
@@ -70,6 +70,11 @@ header {
 
 .logo span {
     color: var(--logo);
+}
+
+.logo a img {
+    width: 2rem;
+    fill: var(--logo);
 }
 
 .gradient {
@@ -92,8 +97,8 @@ header {
 /* ------------- Começo do NavBar ------------- */
 nav {
     position: absolute;
-    z-index: 100;
-    right: 15px;
+    z-index: 200;
+    right: 13px;
     top: 10px;
     height: 15rem;
     width: 50%;
@@ -102,8 +107,9 @@ nav {
     display: none;
     visibility: hidden;
     border-radius: 1rem;
-  
+
 }
+
 
 nav ul li {
     cursor: pointer;
@@ -128,6 +134,69 @@ section p {
     margin-top: .3rem;
 }
 
+/* ------------- Controle dark mode ------------- */
+body.active {
+    background-color: var(--logo);
+    color: var(--background);
+}
+
+nav.active {
+    color: var(--text);
+}
+
+#toggle-logo.active span,
+main.active h1 {
+    color: var(--background);
+}
+
+#icon-dark.active {
+    display: none;
+    visibility: hidden;
+}
+
+#icon-light.active {
+    display: flex;
+    visibility: visible;
+   
+}
+
+#sun,
+#moon {
+    display: flex;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+
+#toggle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 5rem;
+    height: 2.5rem;
+    border-radius: 3.687rem;
+    background-color: var(--footer);
+    transition: .5s;
+    margin: 0 auto;
+
+}
+
+#toggle #indicator {
+    position: absolute;
+    margin-right: 2.8rem;
+    width: 1.7rem;
+    height: 1.7rem;
+    background-color: var(--logo);
+    border-radius: 50%;
+    z-index: 100;
+    transition: .5s;
+}
+
+#toggle.active #indicator {
+    margin-left: 5.6rem;
+}
+
 /* ------------- Controle menu nav mobile ------------- */
 .show {
     display: flex;
@@ -144,7 +213,7 @@ section p {
 .saudacao {
     flex-direction: column;
     margin: 0 auto;
-    
+
 }
 
 .saudacao h1 {
@@ -321,10 +390,16 @@ footer {
 
 }
 
-#icon-social {
+.icon-social {
     display: flex;
     align-items: center;
     justify-content: center;
+
+}
+
+#icon-light {
+    visibility: hidden;
+    display: none;
 }
 
 .social span {
@@ -355,7 +430,9 @@ footer {
 
     }
 
-
+    nav.active {
+        color: var(--background);
+    }
     nav ul {
         display: flex;
         justify-content: space-between;
@@ -370,7 +447,7 @@ footer {
 
     }
 
-   
+
 
     #icon-menu {
         display: none;
@@ -387,14 +464,14 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-       
+
         margin: 0 auto;
     }
 
-   
-  
+
+
     .saudacao h1 {
-       
+
         text-align: center;
         font-size: 3rem;
 
@@ -431,7 +508,7 @@ footer {
     .contato textarea {
         width: 40rem;
     }
-    
+
     .description,
     .formacao,
     .portifolio,
@@ -449,7 +526,7 @@ footer {
     .formacao,
     .portifolio,
     .contato p {
-    
+
         font-size: 1.2rem;
     }
 }
